@@ -1,6 +1,7 @@
 let elList = document.querySelector('.js-list');
 let elSelect1 = document.querySelector('.js-select1');
 let elSelect2 = document.querySelector('.js-select2');
+let elBtn = document.querySelector('.dark-btn');
 
 function year(format) {
 	var date = new Date(format);
@@ -112,3 +113,22 @@ elSelect2.addEventListener('change', function () {
 
 	filmFunc(sortArr, elList);
 });
+
+let theme = false;
+
+elBtn.addEventListener('click', function () {
+	theme = !theme;
+	window.localStorage.setItem('theme', theme ? 'dark' : 'light');
+
+	changeTheme();
+});
+
+function changeTheme() {
+	if (window.localStorage.getItem('theme') == 'light') {
+		document.body.classList.add('light');
+	} else {
+		document.body.classList.remove('light');
+	}
+}
+
+changeTheme();

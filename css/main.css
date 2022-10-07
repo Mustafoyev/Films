@@ -4,6 +4,34 @@ body {
 	background-color: #100e19;
 }
 
+.light {
+	background-color: #fff;
+}
+
+.light > .container > .top-wrapper > .title {
+	color: #000;
+}
+
+.light > .container > .top-wrapper > .dark-btn {
+	background-color: #000;
+	color: #fff;
+}
+
+.light > .container > ul > li {
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px 0px,
+		rgba(0, 0, 0, 0.22) 0px 15px 12px 0px;
+	border: 1px solid #000;
+}
+
+.light > .container > ul > li > h3 {
+	border-bottom: 1px solid #000;
+	color: #000;
+}
+
+.light > .container > ul > li > .wrapper {
+	border-top: 1px solid #000;
+}
+
 .container {
 	width: 100%;
 	max-width: 1240px;
@@ -11,10 +39,25 @@ body {
 	padding: 0 20px;
 }
 
+.top-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 .title {
 	margin: 50px 0;
 	font-size: 48px;
 	color: #fff;
+}
+
+.dark-btn {
+	display: block;
+	padding: 8px;
+	border: 0;
+	background-color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 select {
