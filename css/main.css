@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #100e19;
+	overflow-x: hidden;
 }
 
 .light {
@@ -12,7 +13,12 @@ body {
 	color: #000;
 }
 
-.light > .container > .top-wrapper > .dark-btn {
+.light > .container > .top-wrapper > .buttons-wrapper > .dark-btn {
+	background-color: #000;
+	color: #fff;
+}
+
+.light > .container > .top-wrapper > .buttons-wrapper > .bookmark {
 	background-color: #000;
 	color: #fff;
 }
@@ -26,10 +32,6 @@ body {
 .light > .container > ul > li > h3 {
 	border-bottom: 1px solid #000;
 	color: #000;
-}
-
-.light > .container > ul > li > .wrapper {
-	border-top: 1px solid #000;
 }
 
 .container {
@@ -51,8 +53,15 @@ body {
 	color: #fff;
 }
 
-.dark-btn {
+.buttons-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.dark-btn,
+.bookmark {
 	display: block;
+	margin-right: 10px;
 	padding: 8px;
 	border: 0;
 	background-color: #fff;
@@ -77,7 +86,7 @@ ul {
 	flex-wrap: wrap;
 }
 
-li {
+ul > li {
 	width: 100%;
 	max-width: 300px;
 	margin-bottom: 30px;
@@ -85,19 +94,118 @@ li {
 		rgba(0, 0, 0, 0.22) 0px 15px 12px 0px;
 	border: 1px solid #fff;
 	border-radius: 10px;
+	text-align: center;
+}
+
+.mark-wrapper {
+	position: absolute;
+	top: 100px;
+	right: 0;
+	width: 300px;
+	transition: all 0.4s ease;
+	background-color: #f2f2f2;
+}
+
+.mark-wrapper > .mark {
+	margin: 0;
+	list-style-type: none;
+	background-color: transparent;
+	transition: all 0.4s ease;
+}
+
+.mark > li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5px 5px;
+	padding: 10px;
+	box-shadow: none;
+	background-color: red;
+	border: 0;
+}
+
+.mark > li > h3 {
+	padding: 0;
+	border-bottom: 0;
+	color: #000;
+}
+
+ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ol > li {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.info-content {
+	width: 300px;
+	padding: 20px;
+	background-color: #f2f2f2;
+}
+
+.del-btn,
+.del-mark-btn {
+	display: block;
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	border: 0;
+	background-color: #000;
+	color: #fff;
+}
+
+.info-title {
+	border-bottom: 1px solid #000;
+	color: #000;
 }
 
 h3 {
 	margin: 0;
 	padding: 10px 0;
-	border-bottom: 1px solid #fff;
 	text-align: center;
+	border-bottom: 1px solid #fff;
 	color: #fff;
 }
 
 img {
 	width: 100%;
 	height: 260px;
+}
+
+.mark-btn {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 140px;
+	width: 60px;
+	padding: 5px;
+	border-radius: 6px;
+	background-color: #f2f2f2;
+}
+
+.info-btn {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 60px;
+	padding: 5px;
+	border-radius: 6px;
+	background-color: #f2f2f2;
 }
 
 .wrapper {
